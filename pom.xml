@@ -48,7 +48,7 @@
 
         <archunit.version>1.0.1</archunit.version>
         <awaitility.version>4.2.0</awaitility.version>
-        <chartfx.version>11.3.0</chartfx.version>
+        <chartfx.version>11.2.7</chartfx.version>
         <checkstyle-config.version>0.1.0</checkstyle-config.version>
         <checkstyle.version>10.7.0</checkstyle.version>
         <deeplearning4j.version>0.9.1</deeplearning4j.version>
@@ -129,6 +129,14 @@
                 <type>pom</type>
                 <scope>import</scope>
             </dependency>
+            <dependency>
+                <groupId>de.gsi</groupId>
+                <artifactId>chartfx</artifactId>
+                <version>${chartfx.version}</version>
+                <type>pom</type>
+                <scope>import</scope>
+            </dependency>
+
             <dependency>
                 <groupId>org.springdoc</groupId>
                 <artifactId>springdoc-openapi-ui</artifactId>
@@ -282,11 +290,6 @@
                 <version>${deeplearning4j.version}</version>
             </dependency>
 
-            <dependency>
-                <groupId>io.fair-acc</groupId>
-                <artifactId>chartfx</artifactId>
-                <version>${chartfx.version}</version>
-            </dependency>
 
             <dependency>
                 <groupId>org.ta4j</groupId>
