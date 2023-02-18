@@ -7,13 +7,13 @@
 
     <groupId>ua.com.gfalcon</groupId>
     <artifactId>parent-pom</artifactId>
-    <version>1.0.0</version>
+    <version>1.1.0</version>
     <packaging>pom</packaging>
 
     <parent>
         <groupId>org.springframework.boot</groupId>
         <artifactId>spring-boot-dependencies</artifactId>
-        <version>2.7.5</version>
+        <version>2.7.8</version>
     </parent>
 
     <name>${project.artifactId}</name>
@@ -46,38 +46,39 @@
         <maven-checkstyle-plugin.fail-on-violation>true</maven-checkstyle-plugin.fail-on-violation>
         <maven-checkstyle-plugin.fails-on-error>true</maven-checkstyle-plugin.fails-on-error>
 
-        <archunit.version>1.0.0</archunit.version>
+        <archunit.version>1.0.1</archunit.version>
         <awaitility.version>4.2.0</awaitility.version>
-        <chartfx.version>11.3.0</chartfx.version>
+        <chartfx.version>11.2.7</chartfx.version>
         <checkstyle-config.version>0.1.0</checkstyle-config.version>
-        <checkstyle.version>10.3.4</checkstyle.version>
+        <checkstyle.version>10.7.0</checkstyle.version>
         <deeplearning4j.version>0.9.1</deeplearning4j.version>
-        <docker-java.version>3.2.13</docker-java.version>
+        <docker-java.version>3.3.0</docker-java.version>
         <easy-props.version>4.0.0</easy-props.version>
         <easy-random-core.version>5.0.0</easy-random-core.version>
         <googleauth.version>1.5.0</googleauth.version>
         <jcabi-aspects.version>0.24.1</jcabi-aspects.version>
-        <jmh.version>1.35</jmh.version>
-        <metrics.version>4.2.12</metrics.version>
+        <jmh.version>1.36</jmh.version>
+        <metrics.version>4.2.16</metrics.version>
         <moneta.version>1.4.2</moneta.version> <!-- org.javamoney : moneta -->
-        <optaplanner.version>8.29.0.Final</optaplanner.version>
+        <optaplanner.version>8.34.0.Final</optaplanner.version>
         <quartz.version>2.3.2</quartz.version>
         <reflections.version>0.10.2</reflections.version>
-        <rest-assured.version>5.2.0</rest-assured.version>
-        <rxjava.version>3.1.5</rxjava.version>
-        <selenide.version>6.9.0</selenide.version>
-        <spring-boot-admin.version>2.7.6</spring-boot-admin.version>
+        <rest-assured.version>5.3.0</rest-assured.version>
+        <rxjava.version>3.1.6</rxjava.version>
+        <selenide.version>6.11.2</selenide.version>
+        <spring-boot-admin.version>2.7.10</spring-boot-admin.version>
         <spring-cloud.version>2021.0.3</spring-cloud.version> <!-- org.springframework.cloud : spring-cloud-dependencies -->
-        <springdoc.version>1.6.12</springdoc.version> <!-- org.springdoc : springdoc-openapi-ui -->
+        <springdoc.version>1.6.14</springdoc.version> <!-- org.springdoc : springdoc-openapi-ui -->
         <ta4j-core.version>0.15</ta4j-core.version>
-        <testcontainers.version>1.17.5</testcontainers.version> <!-- org.testcontainers : testcontainers-bom -->
+        <testcontainers.version>1.17.6</testcontainers.version> <!-- org.testcontainers : testcontainers-bom -->
         <vavr.version>0.10.4</vavr.version>
+        <yahoofinance-api.version>3.17.0</yahoofinance-api.version>
 
         <docker-maven-plugin.version>1.2.2</docker-maven-plugin.version>
         <frontend-maven-plugin.version>1.12.1</frontend-maven-plugin.version>
         <jacoco-maven-plugin.version>0.8.8</jacoco-maven-plugin.version>
         <maven-checkstyle-plugin.version>3.2.0</maven-checkstyle-plugin.version>
-        <maven-version-ruleset.version>0.1.1</maven-version-ruleset.version>
+        <maven-version-ruleset.version>1.0.0</maven-version-ruleset.version>
         <ossindex-maven-plugin.version>3.2.0</ossindex-maven-plugin.version>
     </properties>
 
@@ -129,9 +130,23 @@
                 <scope>import</scope>
             </dependency>
             <dependency>
+                <groupId>de.gsi</groupId>
+                <artifactId>chartfx</artifactId>
+                <version>${chartfx.version}</version>
+                <type>pom</type>
+                <scope>import</scope>
+            </dependency>
+
+            <dependency>
                 <groupId>org.springdoc</groupId>
                 <artifactId>springdoc-openapi-ui</artifactId>
                 <version>${springdoc.version}</version>
+            </dependency>
+
+            <dependency>
+                <groupId>com.yahoofinance-api</groupId>
+                <artifactId>YahooFinanceAPI</artifactId>
+                <version>${yahoofinance-api.version}</version>
             </dependency>
 
             <dependency>
@@ -275,11 +290,6 @@
                 <version>${deeplearning4j.version}</version>
             </dependency>
 
-            <dependency>
-                <groupId>io.fair-acc</groupId>
-                <artifactId>chartfx</artifactId>
-                <version>${chartfx.version}</version>
-            </dependency>
 
             <dependency>
                 <groupId>org.ta4j</groupId>
