@@ -7,13 +7,13 @@
 
     <groupId>ua.com.gfalcon</groupId>
     <artifactId>parent-pom</artifactId>
-    <version>1.1.0</version>
+    <version>1.2.0</version>
     <packaging>pom</packaging>
 
     <parent>
         <groupId>org.springframework.boot</groupId>
         <artifactId>spring-boot-dependencies</artifactId>
-        <version>2.7.8</version>
+        <version>2.7.10</version>
     </parent>
 
     <name>${project.artifactId}</name>
@@ -56,20 +56,22 @@
         <easy-props.version>4.0.0</easy-props.version>
         <easy-random-core.version>5.0.0</easy-random-core.version>
         <googleauth.version>1.5.0</googleauth.version>
+        <ibkr.tws.api.version>9.72.18</ibkr.tws.api.version>
         <jcabi-aspects.version>0.24.1</jcabi-aspects.version>
         <jmh.version>1.36</jmh.version>
-        <metrics.version>4.2.16</metrics.version>
+        <metrics.version>4.2.18</metrics.version>
         <moneta.version>1.4.2</moneta.version> <!-- org.javamoney : moneta -->
-        <optaplanner.version>8.34.0.Final</optaplanner.version>
+        <optaplanner.version>8.36.0.Final</optaplanner.version>
         <quartz.version>2.3.2</quartz.version>
         <reflections.version>0.10.2</reflections.version>
         <rest-assured.version>5.3.0</rest-assured.version>
         <rxjava.version>3.1.6</rxjava.version>
-        <selenide.version>6.11.2</selenide.version>
+        <selenide.version>6.12.4</selenide.version>
         <spring-boot-admin.version>2.7.10</spring-boot-admin.version>
         <spring-cloud.version>2021.0.3</spring-cloud.version> <!-- org.springframework.cloud : spring-cloud-dependencies -->
-        <springdoc.version>1.6.14</springdoc.version> <!-- org.springdoc : springdoc-openapi-ui -->
+        <springdoc.version>1.6.15</springdoc.version> <!-- org.springdoc : springdoc-openapi-ui -->
         <ta4j-core.version>0.15</ta4j-core.version>
+        <telegrambots.version>6.5.0</telegrambots.version>
         <testcontainers.version>1.17.6</testcontainers.version> <!-- org.testcontainers : testcontainers-bom -->
         <vavr.version>0.10.4</vavr.version>
         <yahoofinance-api.version>3.17.0</yahoofinance-api.version>
@@ -296,6 +298,18 @@
                 <artifactId>ta4j-core</artifactId>
                 <version>${ta4j-core.version}</version>
             </dependency>
+            <dependency>
+                <groupId>com.ib</groupId>
+                <artifactId>tws-api</artifactId>
+                <version>${ibkr.tws.api.version}</version>
+            </dependency>
+
+            <dependency>
+                <groupId>org.telegram</groupId>
+                <artifactId>telegrambots</artifactId>
+                <version>${telegrambots.version}</version>
+            </dependency>
+
 
             <dependency>
                 <groupId>com.tngtech.archunit</groupId>
