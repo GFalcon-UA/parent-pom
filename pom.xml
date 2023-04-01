@@ -7,7 +7,7 @@
 
     <groupId>ua.com.gfalcon</groupId>
     <artifactId>parent-pom</artifactId>
-    <version>1.2.0</version>
+    <version>1.2.1</version>
     <packaging>pom</packaging>
 
     <parent>
@@ -100,22 +100,11 @@
                 </exclusions>
             </dependency>
             <dependency>
-                <groupId>org.hibernate.orm</groupId>
-                <artifactId>hibernate-agroal</artifactId>
-                <version>${hibernate.version}</version>
-                <type>pom</type>
-                <exclusions>
-                    <exclusion>
-                        <artifactId>byte-buddy</artifactId>
-                        <groupId>net.bytebuddy</groupId>
-                    </exclusion>
-                </exclusions>
-            </dependency>
-            <dependency>
                 <groupId>org.javamoney</groupId>
                 <artifactId>moneta</artifactId>
                 <version>${moneta.version}</version>
                 <type>pom</type>
+                <scope>import</scope>
             </dependency>
             <dependency>
                 <groupId>org.springframework.cloud</groupId>
